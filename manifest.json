@@ -1,0 +1,16 @@
+{
+  "name": "BestAdultLiveCamSites",
+  "short_name": "BestCamSites",
+  "description": "Top adult live cam sites ranked and reviewed",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0409",
+  "theme_color": "#e91e8c",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
