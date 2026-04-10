@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.bestadultlivecamsites.cam/sitemap.xml
+Sitemap: https://www.topwebcamrating.cam/sitemap.xml
+
+Host: https://www.topwebcamrating.cam

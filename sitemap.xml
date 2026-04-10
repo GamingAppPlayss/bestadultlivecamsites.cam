@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://www.bestadultlivecamsites.cam/</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://www.topwebcamrating.cam/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://www.bestadultlivecamsites.cam/top-sites.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://www.topwebcamrating.cam/top-sites/</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.topwebcamrating.cam/categories/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://www.bestadultlivecamsites.cam/categories.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.topwebcamrating.cam/for-models/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://www.bestadultlivecamsites.cam/for-models.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://www.topwebcamrating.cam/blog/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.75</priority>
   </url>
-
   <url>
-    <loc>https://www.bestadultlivecamsites.cam/blog.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.topwebcamrating.cam/blog/tokens-credits-session-budget/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
   </url>
-
+  <url>
+    <loc>https://www.topwebcamrating.cam/blog/mobile-checkout-sanity-checks/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.topwebcamrating.cam/blog/private-vs-public-billing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
 </urlset>
