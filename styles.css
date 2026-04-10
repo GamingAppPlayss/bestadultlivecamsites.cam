@@ -1,87 +1,505 @@
-/* TopWebcamRating — global complements to Tailwind CDN */
+/* ============================================================
+   BestAdultLiveCamSites — Custom Styles
+   Complements Tailwind CSS
+   ============================================================ */
+
+/* ---------- CSS Custom Properties ---------- */
 :root {
-  --tw-ring-color: rgba(236, 72, 153, 0.45);
+  --color-bg: #0d0409;
+  --color-card: #2d0f20;
+  --color-accent: #e91e8c;
+  --color-gold: #f5c518;
+  --color-red: #c0392b;
+  --color-card-border: rgba(233, 30, 140, 0.35);
+  --color-text: #f0e6ee;
+  --color-muted: #a07090;
+  --color-green: #22c55e;
+  --font-main: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* ---------- Base Reset & Body ---------- */
+*, *::before, *::after { box-sizing: border-box; }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-*:focus-visible {
-  outline: 2px solid #ec4899;
-  outline-offset: 2px;
-}
+html { scroll-behavior: smooth; }
 
 body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
+/* ---------- Custom Scrollbar ---------- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: #c4177a; }
+
+/* ---------- Top Bar ---------- */
+.top-bar {
+  background: linear-gradient(90deg, #1a0209 0%, var(--color-red) 40%, #8b0000 100%);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 0.45rem 1rem;
+}
+
+/* ---------- Sticky Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(13, 4, 9, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+/* ---------- Hero Section ---------- */
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #0d0409 0%,
+    #1a0812 35%,
+    #2a0820 60%,
+    #0d0409 100%
+  );
+  position: relative;
   overflow: hidden;
 }
 
-.skip-link:focus {
-  position: fixed;
-  left: 1rem;
-  top: 1rem;
-  z-index: 9999;
-  width: auto;
-  height: auto;
-  padding: 0.75rem 1rem;
-  background: #0f172a;
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(233, 30, 140, 0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--color-accent) 0%, #ff6ec7 50%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(233, 30, 140, 0.15);
+  border: 1px solid rgba(233, 30, 140, 0.4);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ff80c8;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Trust Row ---------- */
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.trust-item span.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--color-accent) 0%, #c4177a 100%);
   color: #fff;
-  border-radius: 0.375rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+  box-shadow: 0 4px 20px rgba(233, 30, 140, 0.35);
 }
 
-.hero-gradient {
-  background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(236, 72, 153, 0.35), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(147, 51, 234, 0.2), transparent 50%),
-    linear-gradient(180deg, #1a0a12 0%, #0c0508 100%);
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(233, 30, 140, 0.5);
+  filter: brightness(1.1);
 }
 
-.rank-row-glow {
-  box-shadow: 0 0 0 1px rgba(236, 72, 153, 0.12), 0 12px 40px rgba(0, 0, 0, 0.35);
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-accent);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
-.rank-top3 {
-  box-shadow: 0 0 0 1px rgba(250, 204, 21, 0.35), 0 0 40px rgba(236, 72, 153, 0.15);
+.btn-secondary:hover {
+  background: rgba(233, 30, 140, 0.1);
 }
 
-/* Long-form guide typography (no @tailwindcss/typography plugin on CDN) */
-.guide-content p {
-  margin-top: 1rem;
-  color: rgb(203 213 225);
+/* ---------- Ranking Table ---------- */
+.ranking-section {
+  background: var(--color-bg);
+}
+
+.ranking-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.ranking-card:hover {
+  border-color: rgba(233, 30, 140, 0.4);
+  box-shadow: 0 4px 24px rgba(233, 30, 140, 0.12);
+}
+
+/* Top 3 Glow Effect */
+.ranking-card.top-pick {
+  border-color: rgba(233, 30, 140, 0.7);
+  box-shadow: 0 0 0 1px rgba(233, 30, 140, 0.3),
+              0 8px 40px rgba(233, 30, 140, 0.25),
+              inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  background: linear-gradient(135deg, #3d0f28 0%, #2d0f20 100%);
+}
+
+.rank-number {
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--color-gold);
+  line-height: 1;
+  min-width: 2.5rem;
+  text-shadow: 0 2px 12px rgba(245, 197, 24, 0.3);
+}
+
+.top-pick-badge {
+  position: absolute;
+  top: -1px;
+  right: 1.2rem;
+  background: linear-gradient(90deg, var(--color-accent) 0%, #c4177a 100%);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 0 0 6px 6px;
+}
+
+.exclusive-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(245, 197, 24, 0.15);
+  border: 1px solid rgba(245, 197, 24, 0.4);
+  color: var(--color-gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.site-score {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--color-accent);
+}
+
+.stars { color: var(--color-gold); letter-spacing: 0.05em; }
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.benefit-list li {
+  font-size: 0.83rem;
+  color: #c8a8c0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.benefit-list li::before {
+  content: '✓';
+  color: var(--color-green);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+/* ---------- Review Cards ---------- */
+.review-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: 14px;
+  padding: 1.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(233, 30, 140, 0.15);
+}
+
+/* ---------- Content Sections ---------- */
+.content-section {
+  background: var(--color-bg);
+}
+
+.content-section h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.content-section h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-top: 1.8rem;
+  margin-bottom: 0.7rem;
+}
+
+.content-section p {
+  color: #c8a8c0;
+  margin-bottom: 1rem;
+}
+
+.content-section ul {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-section ul li {
+  color: #c8a8c0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.content-section ul li::before {
+  content: '▸';
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-card-border);
+  margin: 3rem 0;
+}
+
+/* ---------- FAQ Accordion ---------- */
+.faq-item {
+  border: 1px solid var(--color-card-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  background: var(--color-card);
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.97rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.1rem 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: background 0.15s ease;
+}
+
+.faq-question:hover { background: rgba(233, 30, 140, 0.08); }
+
+.faq-icon {
+  color: var(--color-accent);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.25s ease;
+  padding: 0 1.4rem;
+  color: #c8a8c0;
+  font-size: 0.92rem;
   line-height: 1.75;
 }
 
-.guide-content p:first-of-type {
-  margin-top: 0;
+.faq-item.open .faq-answer {
+  max-height: 600px;
+  padding: 0.2rem 1.4rem 1.2rem;
 }
 
-.guide-content h2 {
-  margin-top: 2.5rem;
-  font-size: 1.25rem;
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* ---------- CTA Section ---------- */
+.cta-section {
+  background: linear-gradient(135deg, #1a0812 0%, #280f20 50%, #1a0812 100%);
+  border-top: 1px solid var(--color-card-border);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #060204;
+  border-top: 1px solid var(--color-card-border);
+}
+
+.footer-link {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover { color: var(--color-accent); }
+
+/* ---------- Mobile Menu Overlay ---------- */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(13, 4, 9, 0.98);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-overlay.open { transform: translateX(0); }
+
+.mobile-menu-overlay a {
+  font-size: 1.5rem;
   font-weight: 700;
-  color: rgb(255 255 255);
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
 
-.guide-content strong {
-  color: rgb(241 245 249);
-  font-weight: 600;
+.mobile-menu-overlay a:hover { color: var(--color-accent); }
+
+/* ---------- Utility ---------- */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
-.guide-content em {
-  font-style: italic;
+.category-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: 12px;
+  padding: 1.4rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.category-card:hover {
+  border-color: rgba(233, 30, 140, 0.4);
+  transform: translateY(-2px);
+}
+
+.blog-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-card-border);
+  border-radius: 12px;
+  padding: 1.6rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(233, 30, 140, 0.15);
+}
+
+.badge-18 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-red);
+  color: var(--color-red);
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 768px) {
+  .rank-number { font-size: 1.6rem; }
+  .ranking-card { padding: 1rem; }
+  .content-section h2 { font-size: 1.3rem; }
+  .hero-section { text-align: center; }
+  .trust-row { justify-content: center; }
+  .hero-ctas { justify-content: center; }
 }

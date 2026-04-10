@@ -1,16 +1,15 @@
 {
-  "name": "TopWebcamRating — Live Cam Rankings",
-  "short_name": "TopWebcamRating",
-  "description": "Independent rankings and guides for live adult webcam platforms.",
+  "name": "BestAdultLiveCamSites",
+  "short_name": "BestCamSites",
+  "description": "Top adult live cam sites ranked and reviewed",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0c0508",
-  "theme_color": "#be123c",
-  "lang": "en",
+  "background_color": "#0d0409",
+  "theme_color": "#e91e8c",
   "icons": [
     {
       "src": "/favicon.ico",
-      "sizes": "32x32",
+      "sizes": "any",
       "type": "image/x-icon"
     }
   ]
